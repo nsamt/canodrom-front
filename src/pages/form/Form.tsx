@@ -40,7 +40,7 @@ export function Form() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:3000/events/create", {
+      const response = await fetch("http://canodrom.onrender.com/events/create", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

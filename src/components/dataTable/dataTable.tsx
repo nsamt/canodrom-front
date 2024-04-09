@@ -87,16 +87,16 @@ export function DataTable<TData extends EventsList, TValue>({
     let endpoint = "";
     switch (selectedFilterType) {
       case "last-three-months":
-        endpoint = "http://localhost:3000/events/filter/last-three-months";
+        endpoint = "http://canodrom.onrender.com/events/filter/last-three-months";
         break;
       case "last-six-months":
-        endpoint = "http://localhost:3000/events/filter/last-six-months";
+        endpoint = "http:/canodrom.onrender.com/events/filter/last-six-months";
         break;
       case "last-year":
-        endpoint = "http://localhost:3000/events/filter/last-year";
+        endpoint = "http://canodrom.onrender.com/events/filter/last-year";
         break;
       case "all-events":
-        endpoint = "http://localhost:3000/events/filter/all-events";
+        endpoint = "http://canodrom.onrender.com/events/filter/all-events";
         break;
       default:
         break;
@@ -112,7 +112,7 @@ export function DataTable<TData extends EventsList, TValue>({
       return;
     }
 
-    const endpoint = `http://localhost:3000/events/filter/by-date-range?startDate=${startDate}&endDate=${endDate}`;
+    const endpoint = `http://canodrom.onrender.com/events/filter/by-date-range?startDate=${startDate}&endDate=${endDate}`;
 
     await fetchData(endpoint);
   };

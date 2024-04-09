@@ -24,7 +24,7 @@ export const Header = () => {
 
   const handleDownload = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/events/download", {
+      const response = await axios.get("http://canodrom.onrender.com/events/download", {
         responseType: "blob",
       });
       const url = window.URL.createObjectURL(new Blob([response.data]));
@@ -44,7 +44,7 @@ export const Header = () => {
     formData.append("file", file);
 
     try {
-      await axios.post("http://localhost:3000/events/upload", formData, {
+      await axios.post("http://canodrom.onrender.com/events/upload", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },

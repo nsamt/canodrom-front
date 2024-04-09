@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import * as echarts from "echarts";
 import { DataProps, EventsList } from "../interfaces/interfaces";
-import { should } from "vitest";
 
 const CakeChart3 = ({ themes, title }: DataProps) => {
   console.log("themes", themes);

@@ -3,7 +3,7 @@ import axios from 'axios';
 
 export async function fetchActivities(): Promise<EventsList[]> {
   try {
-    const response = await fetch("http://localhost:3000/events");
+    const response = await fetch("http://canodrom.onrender.com/events");
     if (!response.ok) {
       throw new Error("Network response was not ok");
     }
@@ -15,7 +15,7 @@ export async function fetchActivities(): Promise<EventsList[]> {
   }
 }
 
-const url = 'http://localhost:3000/auth/register';
+const url = 'http://canodrom.onrender.com/auth/register';
 
 export const registre = (userName:string, email: string, password: string ) => axios.post(url, {
   userName,email, password
